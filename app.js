@@ -29,8 +29,9 @@ $(document).ready(function() {
       $('#sunrise').text(sunrise + ' UTC')
       $('#sunset').text(sunset + ' UTC')
 
-      myFunction()
+      pageFadeIn()
     })
+
 
   $('#date').change(function() {
     $.get('https://cors-anywhere.herokuapp.com/http://marsweather.ingenology.com/v1/archive/?terrestrial_date_start=' + $(this).val() + '&terrestrial_date_end=' + $(this).val())
@@ -69,10 +70,10 @@ $(document).ready(function() {
   })
 })
 
-var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 500);
+
+function pageFadeIn() {
+  setTimeout(showPage, 500);
 }
 
 function showPage() {
