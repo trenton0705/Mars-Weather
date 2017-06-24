@@ -1,0 +1,142 @@
+html {
+  background: url('http://www.popsci.com/sites/popsci.com/files/styles/large_1x_/public/rtx1b5ct.jpg?itok=_8RXaNW1') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  font-family: 'Play';
+  font-size: 100%;
+  width: 400px;
+  height: 550px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-left: 25px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+h5 {
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#label {
+  font-size: 1em;
+}
+
+.form {
+  margin-top: 10%;
+  margin-bottom: 0;
+}
+
+#dataDate {
+  margin-top: 30%;
+}
+
+#datebox {
+  text-align: center;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 0px;
+  height: 0px;
+  margin: -5px 0 0 -5px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid rgb(226, 121, 97);
+  border-bottom: 10px solid rgb(123, 61, 45);
+  border-left: 10px solid rgb(185, 110, 79);
+  border-right: 10px solid rgb(182, 95, 67);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0
+  }
+  to {
+    bottom: 0px;
+    opacity: 1
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0
+  }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+#mainBody {
+  display: none;
+  text-align: center;
+  animation: fadeInLoad 1s;
+}
+
+@keyframes fadeInLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Mars Weather</title>
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>MARS</h1>
+  </header>
+
+  <div id="loader"></div>
+
+  <main id="mainBody">
+    <h2 id="dataDate"></h2>
+    <p>Min Temperature (Fahrenheit): <span id="minTempF"></span>&ordm;</p>
+    <p>Max Temperature (Fahrenheit): <span id="maxTempF"></span>&ordm;</p>
+    <p>Atmospheric Pressure: <span id="pressure"></span></p>
+    <p>Sunrise: <span id="sunrise"></span></p>
+    <p>Sunset: <span id="sunset"></span></p>
+    <p>Season: <span id="season"></span></p>
+
+    <form id="datebox" class="form" action="" method="post">
+      <label for="date" id="label"><strong>Select another date: </strong></label>
+      <input type="date" name="date" id="date" min="2012-08-22" value="">
+    </form>
+
+  </main>
+
+  <script src="jquery.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
