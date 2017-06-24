@@ -17,13 +17,13 @@
 
   <main id="mainBody">
     <h2 id="dataDate"></h2>
-    <p>Min Temperature (Fahrenheit): <span id="minTempF"></span>&ordm;</p>
     <p>Max Temperature (Fahrenheit): <span id="maxTempF"></span>&ordm;</p>
+    <p>Min Temperature (Fahrenheit): <span id="minTempF"></span>&ordm;</p>
     <p>Atmospheric Pressure: <span id="pressure"></span></p>
     <p>Sunrise: <span id="sunrise"></span></p>
     <p>Sunset: <span id="sunset"></span></p>
     <p>Season: <span id="season"></span></p>
-
+    <p id="comparison">To compare, the max temperature in <br>Denver was <span id="denMaxTemp">MAX</span>&ordm; and the min was <span id="denMinTemp">MIN</span>&ordm;</p>
     <form id="datebox" class="form" action="" method="post">
       <label for="date" id="label"><strong>Select another date: </strong></label>
       <input type="date" name="date" id="date" min="2012-08-22" value="">
@@ -32,7 +32,7 @@
   </main>
 
   <script src="jquery.js"></script>
-  <script src="popup.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

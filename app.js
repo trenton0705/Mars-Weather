@@ -29,8 +29,15 @@ $(document).ready(function() {
       $('#sunrise').text(sunrise + ' UTC')
       $('#sunset').text(sunset + ' UTC')
 
-      myFunction()
+      $.get('http://api.worldweatheronline.com/premium/v1/past-weather.ashx?key=ae94384d2cf54767b1f150316172406&q=80211&format=json&date=' + data.report["terrestrial_date"])
+        .then(function(weatherData){
+          $('#denMaxTemp').text(weatherData.data.weather[0].maxtempF)
+          $('#denMinTemp').text(weatherData.data.weather[0].mintempF)
+        })
+
+      pageFadeIn()
     })
+
 
   $('#date').change(function() {
     $.get('https://cors-anywhere.herokuapp.com/http://marsweather.ingenology.com/v1/archive/?terrestrial_date_start=' + $(this).val() + '&terrestrial_date_end=' + $(this).val())
@@ -55,24 +62,37 @@ $(document).ready(function() {
             $('#season').text('Spring')
           }
 
-          var sunrise = (data.results[0]["sunrise"]).slice(11, 19)
-          var sunset = (data.results[0]["sunset"]).slice(11, 19)
-
           $('#dataDate').text(data.results[0]["terrestrial_date"])
           $('#maxTempF').text(data.results[0]["max_temp_fahrenheit"])
           $('#minTempF').text(data.results[0]["min_temp_fahrenheit"])
           $('#pressure').text(data.results[0]["pressure"] + ' hPa')
-          $('#sunrise').text(sunrise + ' UTC')
-          $('#sunset').text(sunset + ' UTC')
+
+          if (data.results[0]["sunrise"] !== null) {
+            var sunrise = (data.results[0]["sunrise"]).slice(11, 19)
+            var sunset = (data.results[0]["sunset"]).slice(11, 19)
+            $('#sunrise').text(sunrise + ' UTC')
+            $('#sunset').text(sunset + ' UTC')
+          } else {
+            $('#sunrise').text('No Data')
+            $('#sunset').text('No Data')
+          }
+
+          $.get('http://api.worldweatheronline.com/premium/v1/past-weather.ashx?key=ae94384d2cf54767b1f150316172406&q=80211&format=json&date=' + data.results[0]["terrestrial_date"])
+            .then(function(weatherData){
+              $('#denMaxTemp').text(weatherData.data.weather[0].maxtempF)
+              $('#denMinTemp').text(weatherData.data.weather[0].mintempF)
+            })
+
+
         }
       })
   })
 })
 
-var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 500);
+
+function pageFadeIn() {
+  setTimeout(showPage, 500);
 }
 
 function showPage() {

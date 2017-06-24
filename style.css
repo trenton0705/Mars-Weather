@@ -53,7 +53,7 @@ p {
 }
 
 #dataDate {
-  margin-top: 30%;
+  margin-top: 20%;
 }
 
 #datebox {
@@ -65,15 +65,15 @@ p {
   left: 50%;
   top: 50%;
   z-index: 1;
-  width: 0px;
-  height: 0px;
+  width: 10px;
+  height: 10px;
   margin: -5px 0 0 -5px;
-  border: 8px solid #f3f3f3;
+  border: 5px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 10px solid rgb(226, 121, 97);
-  border-bottom: 10px solid rgb(123, 61, 45);
-  border-left: 10px solid rgb(185, 110, 79);
-  border-right: 10px solid rgb(182, 95, 67);
+  border-top: 5px solid rgb(226, 121, 97);
+  border-bottom: 5px solid rgb(123, 61, 45);
+  border-left: 5px solid rgb(185, 110, 79);
+  border-right: 5px solid rgb(182, 95, 67);
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
