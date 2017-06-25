@@ -43,13 +43,13 @@ p {
   font-size: 1.2em;
 }
 
-#label {
-  font-size: 1em;
-}
-
 .form {
   margin-top: 10%;
   margin-bottom: 0;
+}
+
+#label {
+  font-size: 1em;
 }
 
 #dataDate {

@@ -33,9 +33,9 @@ $(document).ready(function() {
         .then(function(weatherData){
           $('#denMaxTemp').text(weatherData.data.weather[0].maxtempF)
           $('#denMinTemp').text(weatherData.data.weather[0].mintempF)
-        })
 
-      pageFadeIn()
+          pageFadeIn()
+        })
     })
 
 
