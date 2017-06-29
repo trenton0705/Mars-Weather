@@ -35,6 +35,8 @@ $(document).ready(function() {
           $('#denMinTemp').text(weatherData.data.weather[0].mintempF)
 
           pageFadeIn()
+        }).catch(function(error) {
+          pageError()
         })
     })
 
@@ -98,4 +100,13 @@ function pageFadeIn() {
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("mainBody").style.display = "block";
+}
+
+function pageError() {
+  setTimeout(showError, 500);
+}
+
+function showError() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("errorMessage").style.display = "block";
 }

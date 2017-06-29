@@ -48,6 +48,10 @@ p {
   margin-bottom: 0;
 }
 
+#errorMessage {
+  display: none;margin-top: 50%;
+}
+
 #label {
   font-size: 1em;
 }
