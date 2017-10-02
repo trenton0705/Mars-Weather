@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Mars Forecast",
-  "description": "Shows weather information for a specific date on Mars",
+  "name": "Mars Weather",
+  "description": "Shows weather information from the Curiosity rover on Mars",
   "version": "0.1",
 
 
